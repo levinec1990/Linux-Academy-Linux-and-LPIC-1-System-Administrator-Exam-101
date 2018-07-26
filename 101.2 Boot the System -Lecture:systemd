@@ -1,0 +1,38 @@
+*Getting rid of Shell Scripts
+-init and parts of upstart rely on Bash shell scripts
+-Systemd replaces the functionality of the shell scripts with compiled C code
+-Still compatible with older System V Init scripts:
+
+*Unit File Locations
+-Provided by packages installtions(Do not edit these unit files)
+  /usr/lib/systemd/system
+  
+-Unit file location for system admin's(these take precedence over those in /usr):
+  /etc/systemd/system
+  
+-Runtime unit files
+  /run/systemd/system
+  
+-View all unit files on a system:
+  # sysmtcl list-unit-files
+  
+*Components of the Unit File
+-Unit files follow the INI style format first seen in MS-DOS
+-[Unit]
+-Description = Multi-User System
+-Documnetation=man:systemd.special(7)
+-Requires=basic.target
+  orWants=(more robust)
+  
+-Conflicts=rescue.service rescue.traget
+-After= basic.target rescue.service rescue.target
+
+-man 5 systemd.unit
+
+-systemctl cat something.unit
+  This will print out the contents of the unit file specified
+  
+*Systemd is the New Init*
+-The Kernel still looks for /sbin/init
+-systemd just took the place of /sbin/init
+
