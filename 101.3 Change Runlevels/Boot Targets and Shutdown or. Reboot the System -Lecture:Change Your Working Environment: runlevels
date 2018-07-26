@@ -1,0 +1,19 @@
+*Runlevels
+Run Level     Purpose
+0             Halt
+1             Single user Mode
+2             Multi-user mode (no networking)
+3             Multi-user mode (with networking)
+4             unused
+5             Multi-user, with networking and a graphical desktop
+6             Reboot
+
+*Runlevel commands
+$ runlevel = view your current runlevel
+$ telinit =  change to another runlevel
+
+Changing runlevels at boot = Interupt the GRUB boot process by pressing any key during startup. Then at the GRUB selection menu, highlight a kernel to modify, press the 'a' key to add arguments to the end of a kernel line, then enter a runlevel number
+
+/etc/initab = has the default runlevel specified 
+id:5:initdefault = The defaul for this system would be run level five
+
