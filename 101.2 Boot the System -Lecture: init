@@ -1,0 +1,81 @@
+init - short for 'initialization'
+Based off of the System V init used in UNIX systems
+Services are started one after the other in a serial fashion.
+
+*init startup
+
+Runlevels
+Run Level     Purpose
+0             Halt
+1             Single user Mode
+2             Multi-user mode (no networking)
+3             Multi-user mode (with networking)
+4             unused
+5             Multi-user, with networking and a graphical desktop
+6             Reboot
+
+initab
+
+/etc/initab
+
+<identifier>:<runlevel>:<action>:<process>
+
+id3:initdefault:
+
+id = identifier
+3 = run level
+initdefault = action
+process = Empty
+
+si::sysinit:/etc/rc.d/rc.sysinit
+
+id = si
+no runlevel(As there is no number)
+action = sysinit
+process = /etc/rc.d/rc.sysinit
+
+Each line specifies a runlevel
+
+10:0:wait:/etc/rc.d/rc 0
+
+wait - The proces specified will be started once when the runlevel is entered, and init will wait for its termination
+
+*The boot process
+
+1)Boot Partition found
+2)Kernel and initial RAM disk are loaded
+3)Kernel pull initial drivers and set up tools from RAM disk
+4)The kernel hand the system over to /sbin/init
+5)init performs some system maintenance from /etc/rc.d/rc.sysinit
+6)init has read the initdefault line in /etc/initab, and is entering runlevel3
+7)Now the system is ready for use
+
+Red Hat based: /etc/rc.d
+Debian based: /etc/init.d
+
+rc = run commands
+
+rc0.d = runlevel 0
+rc1.1 = runlevel 1
+
+rc.sysinit = Script that does housecleaning before entering its runlevel
+rc.local = Run after the run level is completing loaded
+
+ls /etc/rc.d/rc3/d
+
+K01dnsmasq
+S08mcstrans
+
+These are symbolic links back to the /etc/init.d
+Begin with K = Services that are to be killed
+Begin with S = These services are to be started
+
+Numbers indicate the loading process
+S08ip6tables This is loading first
+S08iptables  Next up
+S10network
+
+/etc/init.d - contains the scripts for the services on the system
+
+/etc/init.d/rc - script that orchestrates how the runlevel scripts run and what occurs when a runlevel changes
+
