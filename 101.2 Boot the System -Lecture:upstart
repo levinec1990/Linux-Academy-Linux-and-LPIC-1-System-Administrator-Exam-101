@@ -1,0 +1,32 @@
+*upstart background
+
+First developed for Ubuntu in 2006
+First used in Ubuntu 6.10
+Eventually used in Red Hat Enterprise Linux 6, Debian, and Fedora 9
+Unlike init, upstart offers asynchronous starting of services - decreasing boot up times
+Works off of real-time events, which init was not designed to understand
+Upstart not only stop and start services but monitors their availability as well
+
+*init boot sequence 
+/sbin/init -> /etc/inittab -> /etc/rc.d/rc.sysinit -> /etc/rc.d/rcX.d (in sequential order) -> Login
+
+*upstart boot sequence
+/sbin/init -> startup(7) -> mountall(8)
+                    |-> /etc/init/rc-sysinit.conf -> telinit(8) -> runlevel(7) -> /etc/init/rc.conf -> Login
+
+*upstart Service Monitoring
+-init is static, it does not natively respond to changes on a system
+
+-upstart is dynamic, it can respond to changes on the system
+
+-A change on a Linux system is an event
+
+-Events trigger jobs
+
+-Jobs have two categories
+tasks
+services
+
+*Job states
+Waiting -> starting -> running -> stopping -> killed -> post-stop -> waiting
+
