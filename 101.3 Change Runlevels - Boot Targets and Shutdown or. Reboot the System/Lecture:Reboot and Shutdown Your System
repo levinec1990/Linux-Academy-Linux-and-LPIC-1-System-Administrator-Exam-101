@@ -1,0 +1,15 @@
+*Reboot Commands*
+$ reboot
+$ telinit 6
+$ shutdown -r now
+$ systemctl isolate reboot.target
+
+wall = Broadcasts a message to all logged in users(after message is typed, terminate the message with a Cntrl+D)
+
+*Shutdown Commands
+$ poweroff
+$ telinit 0
+$ shutdown -h 1 minute
+$ systemctl isolate poweroff.target
+
+acpid = Advanced Configuration and Power interface, registers system events (such as pressing the power button or closing laptop lid) 
