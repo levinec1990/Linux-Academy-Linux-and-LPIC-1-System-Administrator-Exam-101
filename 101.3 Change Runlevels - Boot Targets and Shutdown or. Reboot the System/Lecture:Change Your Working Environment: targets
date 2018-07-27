@@ -1,0 +1,39 @@
+*Purpose of a systemd Target*
+-A target is a unit that syncs up with other units when the computer boots or changes states
+-Often used to bring the system to a new state:
+  -i.e a state with just a command line: multi-user.target
+  -i.e a state with a desktop enviroment: graphical.target
+-Other units associate themselves with a target for an operating enviroment
+
+*Types of Targets
+-multi-user.target: Multi-user target similiar to runlevel 3
+-graphical.target: Multi-user system with a desktop enviroment similar to runlevel 5
+-rescue.target: Pulls in a basic system and file system mounts and provides a rescue shell
+-basic.target: basic system, used during the boot process before another target takes over
+-sysint.target: system initialization
+
+*Target Units
+$ systemctl list-unit-files -t target 
+Shows all unit files for available targets
+
+$ systemctl -list-units -t target 
+Show all active and loaded unit files
+
+$systemctl get-default
+List out the default target
+
+$systemctl set-defult
+Change the default target to a different target
+
+*Changing Targets
+$systemctl isolate <target> 
+Changes the running state of a system to a different target than is running
+
+$systemctl rescue 
+Almost identical to System V Init single-user mode, allows the root user to repair system
+
+$systemctl reboot
+Will run the reboot.target. Same as running command reboot
+
+$systemctl poweroff
+Will run the poweroff.target. Same as typing poweroff
