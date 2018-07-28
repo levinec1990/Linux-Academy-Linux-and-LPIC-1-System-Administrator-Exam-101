@@ -1,0 +1,24 @@
+* LVM(Logical Volume Manager)
+Allows the creation of 'groups' of disks or partitions that can be assembled into a single(or multipple) filesystems:
+
+- Can be used for nearly any mount point EXCEPT /boot
+- Flexibility - allows for resizing of volumes
+- Snapshots - allows for 'point in time' copies of your logical volume
+
+* Example layout of an LVM Group
+
+File system    /        /var    swap    /home
+Logical Volume lv_root  lv_var  lv_swap lv_home
+Volume Group  vg_base
+Physical Volume /dev/sda /dev/sdb /sdc
+
+*Sampling of LVM Commands
+$ pvs
+Lists out the physical volumes in an LVM group
+
+$ vgs
+List out the volume groups within an LVM group
+
+$ lvs
+Lists out the logical volumes within an LVM group
+
