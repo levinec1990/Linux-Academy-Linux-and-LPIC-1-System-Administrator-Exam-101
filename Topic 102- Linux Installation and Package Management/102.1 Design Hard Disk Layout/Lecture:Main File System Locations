@@ -1,0 +1,32 @@
+* The Main File System Locations
+Primary locations that you must know
+- / bottom of the directory tree, 'the root'
+- /var: The variable location, log files, and dynamic content(such as web sites) are often found here
+- /home: The users home directory, where personal files are stored
+- /boot: The boot directory, where the linux kernel and supporting files are stored
+- /opt: Location used for "optional" software, often used by third party vendors. Enterprise enviorments use this location often
+
+* Swap Space
+Swap is temporary storage that acts like RAM:
+- When a percentage of RAM is full, the kernel will move less used data to swap
+- Swap partition(Most common setup)
+- Swap file(Similar to the page file on a Windows system)
+  () Much slower performance than using a dedicated partition 
+  
+- Sizing
+  () Older rule of thumb ranged from 1.5X to 2.0X the size of your available RAM
+  () Now, no less than 50% of available RAM
+  
+* Main file system location Commands
+
+$ mount
+Can be used to mount paritions to directories, or show all existing mounts without any options
+
+$ lblk
+Used to show all block devices on a system and their names
+
+$ fdisk -l /dev/diskname
+Can be used to list out partition information on the specified disk
+
+$ swapon --summary 
+Shows a summary of the swap usuage on a system, same information can be found in /proc/swaps
