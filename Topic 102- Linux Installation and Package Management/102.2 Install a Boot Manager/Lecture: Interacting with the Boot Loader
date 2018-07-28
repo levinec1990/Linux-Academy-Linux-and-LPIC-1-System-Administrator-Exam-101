@@ -1,0 +1,24 @@
+*GRUB Legacy
+
+[A] key
+append options to the kernel boot line
+
+[C] key
+open up the GRUB command line
+
+[ESC] key
+escapes out of any GRUB menu
+
+Arrow Keys
+Used to highlight an option in the GRUB menu
+
+*GRUB2
+
+[E] key
+used to edit a GRUB menu item
+
+[ESC] key to go to previous menu item
+
+Cntrl+x or F10
+boots a selection or modified line
+
