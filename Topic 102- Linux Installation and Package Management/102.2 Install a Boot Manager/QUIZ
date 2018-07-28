@@ -1,0 +1,24 @@
+Question 1: Where would you typically install software from a third-party vendor?
+
+Answer: /opt 
+
+Question 2: Which device is the first SATA disk on the system?
+
+Answer: /sda
+
+Question 3: Which command would you run after making a change to a GRUB2 configuration file?
+
+Answer: grub2-mkconfig -o /boot/grub2/grub.cfg
+
+Question 4: If you need to make a manual change to GRUB2, where would you make this change?
+
+Answer: /etc/default/grub
+
+Question 5: Which of the following are features of Logical Volume Management (LVM)? 
+
+Answer: Resizing of a logical volume to make more space for a volume
+        Snapshots of a live file system that can be used for backups
+
+Question 6: Which of the following directories should generally be set up on a separate partition?
+
+Answer: /var
