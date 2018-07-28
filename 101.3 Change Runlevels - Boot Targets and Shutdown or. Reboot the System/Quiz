@@ -1,0 +1,24 @@
+Question 1: Which command posts a message to the terminal window notifying other users on the system that you are about to reboot the computer?
+
+ANSWER: wall "This computer will be rebooted in 5 minutes."
+
+Question 2: Which commands shut down your computer? (Choose all that apply)
+
+Answer: shutdown -h -t now and systemctl isolate shutdown.target
+
+Question 3: On a sysvinit system, which command shows you the current runlevel?
+
+Answer: runlevel
+
+Question 4: Which options configure a computer to boot into a shell environment where more than one person can log into the system and have network access? (Choose all that apply)
+
+Answer: Edit the /etc/inittab file, and set the first directive to id:3:initdefault
+
+Why is this correct?
+This configures a sysvinit system so that the next time it boots, it boots into runlevel 3, which provides a command line environment with network access for multiple people.
+
+systemctl set-default multi-user.target
+
+Question 5: Which command starts a graphical desktop session on a Linux system running sysvinit?
+
+Answer: telinit 5
