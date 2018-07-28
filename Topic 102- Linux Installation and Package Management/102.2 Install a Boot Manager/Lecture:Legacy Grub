@@ -1,0 +1,23 @@
+* Grand Unified Boot Loader (GRUB) on MBR
+
+*Installing GRUB
+$ grub-install [device]
+* Command used to installl GRUB to the specified device
+*Device can be /dev/sda or /dev/hd0 or '(hd0)'
+
+*Executing grub-install on a system that is actively up and running is potential dangerous:
+  () This step is typically done from a live CD/USB where GRUB is getting installed to a new disk
+  
+* GRUB Shell commands
+$ grub 
+Invokes the GRUB shell enviroment
+
+$ help
+Print the help listing for GRUB, or get more info on a command, i.e 'help [command]'
+
+$ find
+Search for a file in all partitions and list the device(s) the file is on 
+
+$ quit
+Exit the grub shell
+
