@@ -1,0 +1,26 @@
+* Differences between MBR and GPT
+MBR(Master Boot Recorder):
+- Traditionally supported only 26 totatl partitions(4 partitions, with one partition extended to 23 partitions)
+- Partition size limited to 2TB
+
+GPT(GUID Partition Table):
+- Supports 128 partitions
+- Partition size up in the ZB(zettabyte) range
+- Needs UEFI(Unified Extensible Firmware Interface) to boot:
+  () Replacement for traditional BIOS, can act in legacy BIOS mode
+  () Requires a 64 bit operating system
+  () Prevents unauthorized operating systems from booting on the system
+  
+*GRUB2 Configuration Commands:
+Red Hat Based distros = grub2-<command>
+Debian Based distros  = grub-<command>
+
+$ grub2-editenv list
+View the default boot entry for the grub configuration file
+
+$ grub2-mkconfig
+Creates (or updates) a /boot/grub2/grub.cfg file based on entries from /etc/default/grub file. 
+
+$ update-grub
+Command that can be used to update a GRUB2 configuration after changes to /etc/default/grub have been made
+
