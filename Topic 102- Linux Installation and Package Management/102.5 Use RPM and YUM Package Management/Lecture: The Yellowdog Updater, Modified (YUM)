@@ -1,0 +1,57 @@
+* yum
+- yum = Yellowdog Updater, Modified
+  () Originally used for the Yellowdog Linux distribution
+  () Handles RPM package dependencies
+  () Installs, upgrades, and removes packages
+  () Used on Red Hatt Enterprise Linux(RHEL), Cent)S, Scientific Linux, and older version of Fedora
+  
+- yum setup
+  () Global yum configuration options are set in /etc/yum.conf
+  () Reads repository information from /etc/yum.repos.d/
+  () Cahces latest repository information in /var/cache/yum
+  
+* Other RPM Package Managers
+- Zypper
+  () Used on SUSE Linux distributions
+  () Examples:
+              * zypper repos
+              * zypper install vim
+              
+- DNF = Dandified yum:
+  () Used on Fedorar Linux distro's
+  () Uses same command syntax as yum
+  
+* yum Commands
+
+$ yum update
+Searchs online repositories for updated packages compared to what is currently installed on the system, upgrades packages
+
+$ yum search 
+Searches the yum repositories for a specified package
+
+$ yum info
+Lists out information about a specified package
+
+$ yum list installed
+Displays all installed packages
+
+$ yum clean all
+Cleans up all of yum's cache information and its local database file
+
+$ yum install
+Installs a specified package and all of its dependencies
+
+$ yum remove
+Unistalls a package, leaves dependencies behind
+
+$ yum autoremove
+Unistalls a package and its dependencies
+
+$ yum whatprovides
+Find out what package provides a specified file name
+
+$ yum reinstall
+Reinstalls a specified package
+
+
+    
