@@ -1,0 +1,39 @@
+* The Debian Package Utility
+- The .deb package contains:
+  () application or utility
+  () default configuration files
+  () how and where to install the files that come with the package
+  () listing of dependencies the package requires
+  
+- Dependencies need to already be installed, or installed with the package
+  () apt handles dependencies for you, dpkg does not
+  
+*dpkg Commands
+
+$ dpkg --info
+Displays information on a package
+
+$ dpkg --status
+Same as --info but less detail
+
+$ dpkg -l 
+Lists out packages that match the string provided
+
+$ dpkg -i 
+Installs specified package(s)
+
+$ dpkg -L
+Lists out all files that were installed with a specified package
+
+$ dpkg -r 
+Removes a specified package but leaves the configuration files behind
+
+$ dpkg -P
+Removes a specified package and also any configuration files that were installed with it
+
+$ dpkg -S
+Searches through the package databases for a file specified and lists out any mentions of the specified file or string
+
+$ dpkg-reconfigure
+Allows for the modification of a package by re-running the application's configuration tool
+
