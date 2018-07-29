@@ -1,0 +1,31 @@
+*What is a Shared Library
+- Files containing functionality that other applications can use
+- These files end in a '.so' extension , for 'shared object'
+- Found in the following locations on a Linux system
+  () /lib
+  () /usr/lib (for 32 bit systems and /usr/lib64 (for 64 bit systems)
+  () /usr/local/lib
+  () /usr/share
+  
+- Two types of library files:
+  () Dynamic (end in .so)
+  () Statically linked (end in .a)
+  
+* Managing Shared Libraries
+$ ldd
+Prints out shared object (library) dependencies
+
+$ ldconfig
+Configure a dynamic linker run-time bindings, creates a cache based on library directories and can show
+you what is currently cached. 
+
+$ /etc/ld.so.conf
+Configuration files that points to directories and other configuration files that hold references to 
+library directory locations
+
+$ echo $LD_LIBRARY_PATH$
+Legacy enviroment variable that points to a path where library files can be read from
+
+An example 
+export LD_LIBRARY_PATH/opt/java/jr/lib
+
