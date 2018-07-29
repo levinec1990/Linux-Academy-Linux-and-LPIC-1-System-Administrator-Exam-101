@@ -1,0 +1,44 @@
+* APT
+- APT: Advanced Package Tool
+  () Installs applications (and their dependencies)
+  () Removes applications
+  () Updates and upgrades packages
+- Basics of how it works:
+  () Reads the /etc/apt/sources.list
+  () Directs installation and uninstallation of packages to dpkg
+  
+*apt Commands
+
+$ cat /etc/apt/sources.list
+Configuration file that list out repository locations for packages
+
+$ apt-get-update
+Updates the local apt cache with a listing of packages that can be updates/upgraded and installed 
+
+$ apt-get-upgrade
+upgrades the packages that have upgrades available 
+
+$ apt-get-install
+Installs a package from the repositories in the sources list file
+
+$ apt-get-remove
+Removes a package from the system but any configuration files that came with the package will be left behind
+
+$ apt-get-purge
+Removes the package from the system and any associated configuration files
+
+$ apt-get-dist-upgrade
+Upgrades all packages on the system up to the next release of the distribution
+
+$ apt-get download
+Downloads the package (Does not install it)
+
+$ apt-chache search
+Searches through your local at cache for a package that can be installed
+
+$ apt-cache show
+lists out basic information about a package
+
+$ apt-cache showpkg
+displays more technical information about a package
+
