@@ -1,0 +1,41 @@
+* Red Hat Package Manager (rpm)
+- The .rpm package contains: 
+  () Application or utility 
+  () Default configuration files
+  () How and where to install the files that come with the package
+  () Listing of dependencies that the package requires
+  
+-The rpm database
+  () Located in /var/lib/rpm
+  () Use the rpm --rebuilddb command to repair a corrupted rpm database
+  
+- Dependencies need to already be installed, or installed with the package
+  () yum handles dependencies for you, rpm does not
+  
+* rpm Commands
+
+$ rpm -qpi 
+Displays information on a package
+
+$ rpm -qpl
+List files in a package
+
+$ rpm -qa 
+List out all installed packages
+
+$ rpm -i 
+Installs a specified package often combined with other options to provide more verbose output
+
+$ rpm -U
+Upgrades an installed package with a newer version
+
+$ rpm -e 
+Uninstalls (erases) an installed package
+
+$ rpm -Va
+Verify all installed packages
+
+$ rpm2cpio 
+Converts an .rpm file into a cpio archive file often combined with the cpio command
+rpm2cpio some.rpm|cpio -idmv
+
