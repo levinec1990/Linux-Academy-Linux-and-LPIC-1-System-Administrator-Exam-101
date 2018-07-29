@@ -1,0 +1,15 @@
+Question 1: On an Ubuntu system, which command would you use to set a new time zone by modifying an installed tzdata package?
+
+Answer: dpkg-reconfigure tzddata
+
+Question 2: You want to see some information on an RPM package before you install it. Which command would you use to accomplish this task?
+
+Answer: rpm -qip
+
+Question 3: Which command shows you what library files a binary depends on?
+
+Answer: ldd
+
+Question 4: Where are the remote repositories configured for a Debian-based system?
+
+Answer: /etc/apt/sources.list
