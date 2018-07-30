@@ -1,0 +1,62 @@
+*Linux Shells
+-The shell is the command line enviroment that you work in on a Linux system:
+  () bash(bourne again shell) = the default
+  () csh - C programming style syntax
+  () ksh - KornShell, based on the Bourne shell, with some features of the C shell added
+  () zsh - Z shell includes elements of the Bash shell, and korn shell
+  
+*Bash Enviroment
+-Enviroment variables:
+  ()Settings that dictate common functionality and locations for various purposes
+  () Syntax
+     * VARIABLE=path,command alias
+    
+  () Example
+    * CWD=/home/user/Documents
+    
+-Bash functions:
+  () Users can create their own custom functions within Bash
+  
+*Bash Enviroment
+
+$ env
+Command that displays enviroment variables
+
+$ echo
+Versatile commmand that ca be used to print the value of a variable to the screen
+
+$ set
+Displays shell settings or shell variables for the session
+
+$ unset
+Removes a variable or custom bash function
+
+$ shopt
+Displays shell options and their current settings
+
+$ export
+Command used to export a variable to the current shell and any new shells started from the current shell
+
+$ pwd
+Print working directory, displays the full path to the current directory
+
+$ which
+Used to locate an application file that is located within hte user's PATH
+
+$ type
+Used to determine if something is a function, file, alias, built-in, or keyword
+
+*Bash Quoting
+
+"weak" quotes
+Weak quotes, or double quotes, will expand variables, but characters used for path substitution or for pattern matching will not be expanded
+e.g:
+echo "$PATH" with print the PATH
+ls "*" will not work as the ls commmand would be looking for a file name *.
+
+"strong quotes"
+Inside strong or single quotes, nothing is interpreted
+e.g:
+echo '$PATH' will print $PATH to the screen
+
+
