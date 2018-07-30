@@ -1,0 +1,59 @@
+*What is a Virtual Machine?
+-Emulation of a specific computer system type
+-Operate based on the architecture and functions of a real computer and its implementation; can involve specialized hardware, software, or both
+-Virtualization software allows you to set up one operating system within another:
+  () They both share the same physical hardware
+  () The virtual machine is isolated from that hardware and has to communicate with it through the Hypervisor
+  
+-Examples
+  ()KVM
+  ()QEMU
+  ()VMWare
+  ()Xen
+  ()VirtualBox
+  
+*Virtual Machine Basics
+-Full virtualization = Guest system is not aware that it is a virtual machine
+-Paravirtualization = guest system is aware that it is a virtual machine, use guest drivers
+  ()Virtual Machines typically perform better with guest drivers
+  
+-Virtual machines can be 'cloned' or turned into templates to rapidly deploy new systems
+  () Note that you may need to change a Linux system's D-Bus machine ID
+  () dbus-uuidgen = ensures that each running kernel interacts with a system that has a unique ID
+  
+*Virtual Machines in the Cloud
+-Virtual servers can be provisioned from cloud providers
+-If using a cloned virtual machine, cloud-init is typically used to insure that user data is completely new
+  () creates new SSH keys
+  () sets the system's default locale
+  () sets the systems host name
+  () sets up mount points
+  
+-Examples
+  ()AWS
+  ()Azure
+  ()Rackspace
+  
+*What is a Container
+-An entirely isolates set of packages, libraries, and/or applications that are completely independent from their surroundings
+-Machine Contianer: Shares a kernel and a file system with the host computer
+-Application Container: Shares everything but the application files and library files that the application needs
+
+-Examples
+  ()Docker
+  ()nspawn(from systemd)
+  ()LXD
+  ()OpenShift
+  
+*Why is the difference Important?
+-Virtualization
+  () Invented to allow the sharing yet segregation fo server instances from each other
+  () Protect one operating system from one another
+  () Prevention of letting spare CPU cycles, memory, or disk space go to waster
+  () They are based on emulating virtual hardware through a hypervisor; heavy in term of system requirements
+  
+-Containers:
+  () Use shared operating systems
+  () More efficient in system resources terms
+  () More granular management of system resources
+  
