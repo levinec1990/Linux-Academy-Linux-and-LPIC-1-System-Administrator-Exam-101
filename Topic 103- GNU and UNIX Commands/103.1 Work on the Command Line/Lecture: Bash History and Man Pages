@@ -1,0 +1,41 @@
+*Bash History
+
+$ history
+Command that shows the most recently run commands
+
+$ bash_history
+File located in the users home directory that contains the previously run commands
+
+HISTFILESIZE
+Enviroment variable that determines how many lines the .bash_history file will contain
+
+*Manual Pages
+-Built-in manual pages for commands, configuration files, and system administrator tasks. 
+
+- Invoked with: man [command name]
+
+-Man pages are broken into 'sections'
+  () Section 1: Executable programs or shell commands
+  () Section 2: System calls - functions provided by the kernel
+  () Section 3: Library calls - functions with program libraries 
+  () Section 4: Special files - typically those found in /dev
+  () Section 5: File formats and conventions - for example /etc/passwd and other configuration files
+  () Section 6: Games
+  () Section 7: Miscellaneous items and conventions -e.g man(7), regex(7)
+  () Section 8: System administration commands - usually only for root
+  () Section 9: Kernel routines(non standard)
+  
+*man Pages
+
+$ man
+Command used to open the manual page for a specified command
+
+$ man -k
+Used to search the man pages for a specific key word
+
+$ apropos
+Links to the 'man-k' command
+
+$ man [section number]
+Open a particular section number for a specified command
+
