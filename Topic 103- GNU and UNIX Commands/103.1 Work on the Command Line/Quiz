@@ -1,0 +1,37 @@
+Question 1: Which command(s) would print out only your current working directory? (Choose all that apply)
+
+Answer: echo $PWD
+        pwd
+        
+Question 2: You are modifying your .bashrc file in your home directory. Which is the proper command to allow a new environment variable to be seen by all shells that completes this line?
+
+__ "JAVA_HOME=/usr/local/java"
+
+Answer: export
+
+Question 3: Which command would provide you with only the value for the environment variable $SHELL?
+
+Answer: echo
+
+Question 4: Which commands would show you the full path to the ls command? (Choose all that apply)
+
+Answer: type -p ls
+        which ls
+        
+Question 5: Which command shows you a listing of all commands that have been entered into the current shell?
+
+Answer: History
+
+Question 6: Which command would provide complete information about the build of your kernel on your system?
+
+Answer: uname -a
+
+Question 7: Which command would enable debugging of a shell script?
+
+Answer: set -x script.sh
+
+Question 8: Which is the most common shell environment used in Linux?
+
+Answer: bash
+        
+        
