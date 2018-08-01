@@ -1,0 +1,24 @@
+*Basic Commands for Viewing Text Files
+
+$ cat
+Used to concatenate(join) and view text files. 
+
+$ less
+Read-only text viewing utility. Allows for paging up and down within a file, and 
+keyword searches
+
+$ head
+Defaults to displaying the first 10 lines of a file. 
+
+$ tail
+Defaults to displaying the last 10 lines of a file. 
+
+$ zcat
+Used to view gzip compressed text files
+
+$ bzcat
+Used to view bunzip2 compressed text files
+
+$ xzcat
+Used to view XZ compressed text files
+
