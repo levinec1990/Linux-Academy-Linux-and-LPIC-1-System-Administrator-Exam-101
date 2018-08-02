@@ -9,3 +9,14 @@ The word count command. Can be used to print the number of words, lines, or byte
 $ od
 The octal dump command. Use to print out a file in octal or many other formats.
 
+* Message Digests
+
+$ md5sum
+Calculates and checks a file's hash based on the MD5 algorithm
+
+$ sha256sum
+Calculates and checks a file's hash value based on the SHA-2 hash algorithm using 256 bits
+
+$ sha512sum
+Calculates and checks a file's hash value based on the SHA-2 hash algorithm using 512 bits
+
