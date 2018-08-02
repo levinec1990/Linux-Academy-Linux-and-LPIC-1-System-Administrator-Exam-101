@@ -1,0 +1,11 @@
+* Basic Text File Statistics
+
+$ nl 
+Prints the number of lines in a file. Output of the command can be modified to fit different cases
+
+$ wc
+The word count command. Can be used to print the number of words, lines, or bytes in a file. 
+
+$ od
+The octal dump command. Use to print out a file in octal or many other formats.
+
