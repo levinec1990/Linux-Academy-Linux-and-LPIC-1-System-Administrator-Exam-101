@@ -1,1 +1,18 @@
+*Text Manipulation
+
+$ sort
+Command used to sort and/or merge lines of a file
+
+$ uniq
+Displays unique lines of a file
+
+$ tr
+Used to translate(or swap) characters in a file for another character
+
+$ cut
+Extracts columns or fields of data from a file
+
+$ paste
+Merges lines of files
+
 
