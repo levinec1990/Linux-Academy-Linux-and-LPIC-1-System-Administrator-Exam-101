@@ -1,0 +1,20 @@
+*Basic Files Commands
+
+$ ls
+Command used to display a 'list' of files and directories
+
+$ touch
+Command that is used to modify a a files time stamp, but more often used to creat an empty file. 
+
+$ cp
+The copy command, used to make a copy of the file
+
+$ rm
+The remove command. Used to delete a file from the system.
+
+$ mv
+The move command. Used to move or rename a file
+
+$ file
+Command used to try and determine a file's type. 
+
