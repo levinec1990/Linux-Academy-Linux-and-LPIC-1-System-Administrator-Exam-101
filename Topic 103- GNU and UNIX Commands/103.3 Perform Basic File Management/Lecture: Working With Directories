@@ -1,0 +1,14 @@
+*Directory Commands
+
+$ cd 
+The 'change directory' command 
+
+$ mkdir
+The 'make directory' command
+
+$ rmdir
+The 'remove directory' command. Will not delete a directory with any content
+
+$PATH
+Enviroment variable that describes the directories that the currently logged in user can run application from without specifying their full path
+
