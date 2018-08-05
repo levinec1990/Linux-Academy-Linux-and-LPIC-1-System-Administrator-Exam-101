@@ -1,0 +1,27 @@
+*Archive and Compression Commands
+
+$ dd
+Copies and converts files. Often used to create files of arbitrary size
+and to back up disk drives
+
+$ tar
+Wraps up files and folder into an archive file. This command does not provide compression on its own. 
+
+$ gzip
+Command that creates .gz compressed files.
+
+$ gunzip
+Command that extracts .gz compressed files
+
+$ bzip2
+Command that creates .bz2 compressed files
+
+$ bunzip2
+Command that extracts .bz2 compressed files
+
+$ xz
+Commands that creates .xz compressed files
+
+$ unxz
+Command that extracts .xz compressed files.
+
