@@ -1,0 +1,17 @@
+*File Globbing
+
+*
+Matches zero or more characters
+
+? 
+Matches any single character
+
+[abc]
+Matches anyone of the characters in the list, case sensitive
+
+[^abc]
+Matches any one character except those in the list, case sensitive
+
+[0-9]
+Matches a range of numbers
+
