@@ -1,0 +1,21 @@
+* find Command
+
+$ find
+
+OPTIONS
+
+-name
+Find files based on their name
+
+-ctime
+Find files based on the time when they were last changed
+
+-atime
+Find files based on their access time
+
+-empty 
+Find files or folders that are empty
+
+-exec[command]{}\;
+The exec statement for the find command that will act on the results of the find command itself. 
+
