@@ -1,0 +1,8 @@
+*More Redirection
+
+$ tee
+The 'tee' command reads data from stdin, and writes that data to stdout and files. This command is useful for chaining together long commands and viewing output at various stages
+
+$ xargs
+Accepts input from stdin and other commands commonly used with the 'find' command but can be used with other commands
+
