@@ -1,2 +1,33 @@
 *Standard Output
 
+-All Unix-like operating systems have something like a bucket where all output goes
+-The bucket is called Standard Output
+-Abbreviated as 'stdout'
+
+*Redirecting Standard Output
+-We can use special characters to intercept information before it gets to 'stdout'
+-Characters: > and >>
+
+*Standard Input
+-Input into a process or application usually comes from entries made on the keyboard
+-Files and standard output from other commands can provide input to another command
+-Special characters: < and |
+-Abbreviated as 'stdin'
+-Examples
+  ()wc test.sh      =input comes from keyboard
+  ()wc < test.sh    =input comes from file 
+  ()cat /etc/passwd | less = input comes from stdout of cat command
+  
+*Standard Error
+-Abreviated as 'stderr'
+-Typically written to the screen
+-Standard Error has a 'file handle' number associated with it: 2
+  ()stdin also has a number: 0
+  ()stout also has a number: 1
+  
+-Redirecting all the things:
+  ()internet-toaster.sh   (stderr goes to screen)
+  ()internet-toaster.sh 2> error.log  (stderr gets redirected to error.log file)
+  ()internet-toaster.sh 2>&1 | less   (stderr and stdout gets sent as stdin to the less command)
+  
+  
