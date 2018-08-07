@@ -1,0 +1,14 @@
+*Basics of a Process
+
+$ ps
+Lists the process status of each running process on the system.
+
+$ top
+Interactive, near real-time monitoring of processes running on a system
+
+man proc
+Manual page for the /proc pseudo file system directory
+
+man signal
+Manual pages for the various signal states of processes 
+
