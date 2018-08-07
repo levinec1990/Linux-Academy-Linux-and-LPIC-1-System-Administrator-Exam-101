@@ -1,0 +1,17 @@
+*Process Management
+
+$ uptime
+View how long the system has been up, how many users are logged in, and CPU load average
+
+$ free
+View used and available memory and swap space
+
+$ pgrep
+Find process information based on process name
+
+$ kill
+Send a signal (usually SIGTERM) to a process based on PID
+
+$ pkill
+Send a signal (usually SIGTERM) to a process based on process name
+
