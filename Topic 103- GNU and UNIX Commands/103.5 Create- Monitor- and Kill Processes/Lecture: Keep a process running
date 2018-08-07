@@ -1,0 +1,32 @@
+*More Process Commands
+
+$ killall
+Kills all processes based on a name provided as an arguement. 
+
+$ watch
+Runs a command at specified intervals. Used to monitor a command's output
+
+$ screen
+A termnial window manager that allows you to run commands in isolated sessions. 
+
+$ tmux
+A modern terminal window manager with extra features
+
+*Keep a process running
+
+$ nohup
+A command that is preceded by nohup receives signal 1(NOHUP) so that should the terminal window close, the process will still run as long as the login session is not terminated
+
+$ bg
+Sends a job to the background while it keeps running
+
+&
+When applied to the end of a command, the command is sent to the background returning the use of the shell to the user
+
+$ fg
+Brings a job that is in the background into the foreground
+
+$ jobs
+Displays a listing of jobs that are in the background
+
+
