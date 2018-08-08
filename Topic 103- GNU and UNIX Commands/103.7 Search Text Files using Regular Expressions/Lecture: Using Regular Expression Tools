@@ -1,0 +1,12 @@
+*Regular Expression Tools
+
+$ sed
+The stream editior command can operate on files using regular expressions
+
+$ egrep
+Command that searches a specified file line by line, returning lines that contain a pattern matching given regular expression. Equilvalent to 'grep -E'
+
+$ fgrep
+Searchs based on strings rather than patterns. Also uses file globbing instead of regular expressions. 
+
+Equivalent to grep -f 
