@@ -1,0 +1,36 @@
+*Regular Expressions
+
+.
+Represents a single character
+
+Example: 
+grep g.m passwd
+Would find combos of starting with g and ending with m
+
+^
+Search the beginning of a line
+
+Example
+grep ^rpc
+
+$
+Search the end of a line
+
+Example
+grep bash$ passwd
+
+[abc]
+Search for specified characters
+
+Example
+grep [v] passwd
+
+[^abc] 
+Search for other characters, but not these
+
+*
+Matches zero or more of the preceding characters or expression
+
+man 7 regex
+Manual pages for regular expressions
+
