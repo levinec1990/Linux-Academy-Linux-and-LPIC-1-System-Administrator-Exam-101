@@ -1,0 +1,16 @@
+*MBR Partitioning Tools
+
+$ lsblk
+Command used to list out block devices(such as hard drives)
+
+$ fdisk
+Legacy command used to create partitions of the MBR(DOS) type.
+
+$ parted
+Modern Command used to create partitions of MBR or GPT types.
+
+*Partitions ID's:
+83 - standard Linux Filesystems
+82 - Linux swap partitions
+8e - Linux LVM Volumes
+
