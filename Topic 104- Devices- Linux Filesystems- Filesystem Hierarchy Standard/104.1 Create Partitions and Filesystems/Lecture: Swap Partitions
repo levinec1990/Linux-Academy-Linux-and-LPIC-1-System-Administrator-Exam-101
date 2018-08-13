@@ -1,0 +1,14 @@
+*Swap Partitions*
+
+$fdisk, gdisk, parted
+Any of these tools can be used to create swap partitions
+
+$ mkswap
+This command is used to format a partition to be used as swap space. 
+
+$ swapon
+Enables a swap partition or file
+
+$ swapoff
+Disables a swap partition or file
+
