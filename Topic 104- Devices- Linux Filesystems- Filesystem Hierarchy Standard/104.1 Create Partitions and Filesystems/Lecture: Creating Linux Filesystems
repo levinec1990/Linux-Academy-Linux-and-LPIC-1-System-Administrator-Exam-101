@@ -1,0 +1,42 @@
+*Linux File Systems
+
+-Non-Journaling
+  () ext 2: legacy Linux file system, released in 1993
+  
+- Journaling
+  () Uses a journal to keep track of changes that have not yet been written to the file system
+  () Examples
+     * ext3: Released in 2001, introduced journaling to ext2
+     * ext4: Released in 2006, added extra features, meant to be stop gap until better solution
+     * XFS:  created in 1993 by Silicon Graphics, Inc for the IRIZ operating system. Ported to Linux in 2001
+     
+*Btrfs
+-Uses CoW(Copy on Write)
+
+-Uses subvolumes
+  () Similiar to a partition
+  () Can be accessed like a directory
+  
+-Snapshots
+  () Subvolumes that reference the original data's location, includes metadata and directory structure
+  
+*FAT File Systems
+
+- File Allocation Table
+  () Linux can use VFAT which allows for long file names
+  () EFI boot partitions need to use a FAT partition(on Linux this will be a vfat partition)
+  
+- exFAT(Extended FAT file system)
+  () Allows for files larger than 2GB in size
+  () Primary used for external disk drives, thumb drives, etc
+  
+* File System Utilities
+
+$ mkfs
+Creates a new file system on a partition. Can be used like
+$ mkfs -t [fs-type]
+$ mkfs.[fstype]
+
+$ blkid
+Display the file systems universally unique identifier (UUID)
+
